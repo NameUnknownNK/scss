@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');//font-family: 'Nunito', sans-serif;
+
+@import 'variables';
+
+html{
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+body{
+    font-family: $font-family;
+    font-size: map-get($font-sizes, 'body');
+    font-weight: map-get($map: $font-weights, $key:'body');
+
+    @include h-font;
+}
+
+a{
+    text-decoration: none;
+    color: $default-foreground;
+}
+
+header{
+    text-align: center;
+    background-color: $default-background;
+    padding: 0.5em;
+    
+    img{
+        float: left;
+        width: 10%;
+    }
+
+    h1, h2{
+        width: 90%;
+        margin: $default-margin;
+    }
+
+    @media (max-width: 768px){
+
+        img{
+          width: 5em;
+          float: none;
+        }
+        h1, h2{
+          float: none;
+          width: 100%;
+        }
+    }    
+}
+
+nav{
+    margin: $divisor-margin;
+    padding: 0.1em;
+    background-color: $default-background;
+    text-transform: uppercase;
+    text-align: center;
+
+    ul{
+        @include horizontal-list;
+        a:hover{
+            font-weight: map-get($map: $font-weights, $key: 'bold');
+            color: $hover-color;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    header{
+        padding: $default-padding;
+    }
+
+    nav{
+        margin: $default-margin;
+    }
+
+    ul li{
+        width: 100%;
+    }
+}
+
+section{
+    min-height: 20em;
+    margin: $divisor-margin;
+
+    article{
+        width: 33%;
+        display: inline-block;
+        min-height: 16em;
+
+        img{
+            width: 25%;
+            float: left;
+        }
+
+        div{
+            width: 75%;
+            float: left;
+        }
+    }
+
+    @include article-bgcolor(0.5);
+
+    @media (max-width: 922px){
+        article{
+            width: 49.5%;
+        }
+    }
+
+    @media (max-width: 768px){
+        article{
+            width: 100%;
+            display: inline-block;
+
+            img{
+                float: none;
+                display: block;
+                padding-left: 37.5%;
+            }
+
+            div{
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    section{
+        margin: $default-margin;
+    }
+}
+
+
+
+footer{
+    text-align: center;
+
+    div{
+        background-color: $default-background;
+        padding: 0.2em 0 0 0;
+        margin-bottom: 0.5em;
+
+        img{
+            width: 3em;
+        }
+    }
+
+    p{
+        background-color: $default-background;
+        font-size: map-get($map: $font-sizes, $key: 'p');
+    }
+
+}
+
+@media (max-width: 768px){
+
+    footer{
+        margin: $default-margin;
+
+        p{
+            margin: $default-margin;
+        }
+    }
+}

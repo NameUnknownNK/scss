@@ -1,0 +1,93 @@
+//Variables
+$max-width: 1400px;
+$default-foreground: rgb(30,30,30);
+$default-background: #eee;
+$hover-color: red;
+
+$default-margin: 0;
+$default-padding: 0;
+
+$divisor-margin: 0.5em 0 0 0;
+
+$font-family: 'Nunito', sans-serif;
+$font-sizes : (
+    'body': 1rem,
+    'h1': 300%,
+    'h2': 200%,
+    'h3': 150%,
+    'li': 110%,
+    'p': 80%
+);
+$font-weights: (
+    'regular': 400,
+    'bold': 700,
+    'light': 300
+);
+
+//Aux variables
+$used-rgb: ();
+
+//Functions
+@function randomred() {
+    @return rgb(random(255), 0, 0);
+}
+
+@function randomgreen(){
+    @return rgb(0, random(255), 0);
+}
+
+@function randomrgb($alpha){
+    @return rgba(random(255), random(255), random(255), $alpha);
+}
+
+@function unique-rgb($alpha){
+    $aux: randomrgb($alpha);
+
+    @while (index($used-rgb, $aux)){
+        $aux: randomrgb($alpha);
+    }
+
+    $used-rgb: append($used-rgb, $aux) !global;
+
+    @return $aux;
+}
+
+//mixins
+@mixin h-font{
+     @for $i from 1 through 3{
+        h#{$i}{
+            font-size: map-get($map: $font-sizes, $key: 'h'+$i);
+            font-weight: map-get($map: $font-weights, $key:'bold' );
+            @if $i == 1{
+                color: randomred();
+            } @else if $i == 2 {
+                color: randomgreen();
+            }
+        }
+     }
+}
+
+@mixin reset-l{
+    list-style-type: none;
+    margin: $default-margin;
+}
+
+@mixin horizontal-list{
+    @include reset-l;
+
+    li{
+        display: inline-block;
+        margin: $default-margin;
+        padding: 0.2em;
+        font-size: map-get($font-sizes, quote(#{&}));
+        font-weight: map-get($map: $font-weights, $key: 'regular');
+    }
+}
+
+@mixin article-bgcolor($alpha){
+    @for $i from 1 through 6{
+        article:nth-child(#{$i}){
+            background-color: unique-rgb($alpha);
+        }
+    }
+}

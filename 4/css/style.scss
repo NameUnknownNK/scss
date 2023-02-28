@@ -1,0 +1,110 @@
+//imports
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+//Variables
+
+$max-width: 1400px;
+
+$margin-top: 1em 0 0 0;
+
+$colors:(
+    main-color1: rgb(200,0,0),
+    main-color2: rgb(0,200,0),
+    main-color3: rgb(0,0,200),
+    main-color4: rgb(200,0,200),
+    light-color: rgb(150,150,150)
+);
+
+$fonts: (
+    font-body: #{"Open Sans", sans-serif},
+    font-h: #{"Abril Fatface", cursive},
+);
+
+$font-weights: (
+    normal: 400,
+    bold: 700
+);
+
+$font-size: 1rem;
+
+//mixins
+
+@mixin hn(){
+    @for $i from 1 through 6{
+        h#{$i}{
+            font-family: map-get($map: $fonts, $key:font-h);
+            font-weight: map-get($font-weights, normal);
+            font-size: $font-size * calc(5 - $i/1.5);
+            margin: 0;
+        }
+    }
+}
+
+//functions
+
+
+//styles
+
+html{
+    margin: auto;
+    max-width: $max-width;
+    font-family: map-get($map: $font-weights, $key: normal) $font-size map-get($map: $fonts, $key: font-body);
+    @include hn;
+}
+
+@each $key,$value in $fonts{
+    span.#{$key}{
+        font-family: #{$value};
+        font-weight: map-get($map: $font-weights, $key: bold);
+
+        &:before{
+            content: quote($string: $value);
+        }
+    }
+
+    article.#{$key}{
+        font-family: #{$value};
+        
+        h3{
+            margin: $margin-top;
+            font-size: 3rem;
+
+            &:before{
+                content: quote($string: $value);
+            }
+        }
+
+        @each $key2,$value2 in $colors{
+            div span.#{$key2}{
+                color: $value2;
+                font-size: 2rem;
+                font-weight: map-get($map: $font-weights, $key: bold);
+            }
+        }
+    }
+}
+
+.titles{
+    div{
+        label{
+            font-family: map-get($map: $fonts, $key:font-body);
+            font-size: 2em;
+            display: inline-block;
+            width: 10%;
+            color: map-get($map: $colors, $key:light-color);
+            font-weight: map-get($map: $font-weights, $key: bold);
+        }
+
+        @for $i from 1 through 6{
+            h#{$i}{
+                display: inline-block;
+                width: 90%;
+            }
+        }
+    }
+}
+
+section{
+    margin: $margin-top;
+}

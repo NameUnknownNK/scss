@@ -1,0 +1,25 @@
+h1 {
+  color: red;
+}
+
+body {
+  background-color: gray;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+ul li {
+  padding-right: 20px;
+  float: left;
+}
+ul li a {
+  color: black;
+  text-decoration: none;
+}
+ul > li {
+  color: white;
+}/*# sourceMappingURL=style_scss.css.map */

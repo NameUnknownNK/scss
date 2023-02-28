@@ -1,0 +1,380 @@
+article.mix-main-color4 .sample, article.variations-main-color4 .sample, article.main-color4 .sample, article.mix-main-color3 .sample, article.variations-main-color3 .sample, article.main-color3 .sample, article.mix-main-color2 .sample, article.variations-main-color2 .sample, article.main-color2 .sample, article.mix-main-color1 .sample, article.variations-main-color1 .sample, article.main-color1 .sample {
+  width: 100%;
+  height: 6rem;
+}
+
+html {
+  max-width: 1400px;
+}
+
+article {
+  display: inline-block;
+  width: 20%;
+  padding: 1em;
+}
+article.main-color1 .sample {
+  background-color: #af0000;
+}
+article.main-color1 .data span {
+  float: right;
+  text-align: right;
+}
+article.main-color1 .data span.name:before {
+  content: "redish";
+}
+article.main-color1 .data span.hex:before {
+  content: "#af0000";
+}
+article.main-color1 .data span.rgb:before {
+  content: "175/0/0";
+}
+article.main-color1 .data span.hsl:before {
+  content: "0deg/100%/34%";
+}
+article.main-color1 .data label {
+  font-weight: bold;
+}
+article.variations-main-color1 h3:before {
+  content: "redish";
+}
+article.variations-main-color1 .sample div {
+  width: 33.3333333333%;
+  height: 100%;
+  float: left;
+}
+article.variations-main-color1 .sample div.light {
+  background-color: #ff1616;
+}
+article.variations-main-color1 .sample div.normal {
+  background-color: #af0000;
+}
+article.variations-main-color1 .sample div.dark {
+  background-color: #300000;
+}
+article.mix-main-color1 h3:before {
+  content: "redish";
+}
+article.mix-main-color1 .sample {
+  background-color: #af0000;
+}
+article.mix-main-color1 .mix-2 {
+  margin-top: 1rem;
+}
+article.mix-main-color1 .mix-2 p {
+  margin-bottom: 0;
+}
+article.mix-main-color1 .mix-2 p:before {
+  content: "redish with greenish";
+}
+article.mix-main-color1 .mix-2 div {
+  width: 100%;
+  height: 3rem;
+  background-color: #694600;
+}
+article.mix-main-color1 .mix-3 {
+  margin-top: 1rem;
+}
+article.mix-main-color1 .mix-3 p {
+  margin-bottom: 0;
+}
+article.mix-main-color1 .mix-3 p:before {
+  content: "redish with blueish";
+}
+article.mix-main-color1 .mix-3 div {
+  width: 100%;
+  height: 3rem;
+  background-color: #690046;
+}
+article.mix-main-color1 .mix-4 {
+  margin-top: 1rem;
+}
+article.mix-main-color1 .mix-4 p {
+  margin-bottom: 0;
+}
+article.mix-main-color1 .mix-4 p:before {
+  content: "redish with forest";
+}
+article.mix-main-color1 .mix-4 div {
+  width: 100%;
+  height: 3rem;
+  background-color: #7d3c08;
+}
+
+article {
+  display: inline-block;
+  width: 20%;
+  padding: 1em;
+}
+article.main-color2 .sample {
+  background-color: #00af00;
+}
+article.main-color2 .data span {
+  float: right;
+  text-align: right;
+}
+article.main-color2 .data span.name:before {
+  content: "greenish";
+}
+article.main-color2 .data span.hex:before {
+  content: "#00af00";
+}
+article.main-color2 .data span.rgb:before {
+  content: "0/175/0";
+}
+article.main-color2 .data span.hsl:before {
+  content: "120deg/100%/34%";
+}
+article.main-color2 .data label {
+  font-weight: bold;
+}
+article.variations-main-color2 h3:before {
+  content: "greenish";
+}
+article.variations-main-color2 .sample div {
+  width: 33.3333333333%;
+  height: 100%;
+  float: left;
+}
+article.variations-main-color2 .sample div.light {
+  background-color: #16ff16;
+}
+article.variations-main-color2 .sample div.normal {
+  background-color: #00af00;
+}
+article.variations-main-color2 .sample div.dark {
+  background-color: #003000;
+}
+article.mix-main-color2 h3:before {
+  content: "greenish";
+}
+article.mix-main-color2 .sample {
+  background-color: #00af00;
+}
+article.mix-main-color2 .mix-1 {
+  margin-top: 1rem;
+}
+article.mix-main-color2 .mix-1 p {
+  margin-bottom: 0;
+}
+article.mix-main-color2 .mix-1 p:before {
+  content: "greenish with redish";
+}
+article.mix-main-color2 .mix-1 div {
+  width: 100%;
+  height: 3rem;
+  background-color: #466900;
+}
+article.mix-main-color2 .mix-3 {
+  margin-top: 1rem;
+}
+article.mix-main-color2 .mix-3 p {
+  margin-bottom: 0;
+}
+article.mix-main-color2 .mix-3 p:before {
+  content: "greenish with blueish";
+}
+article.mix-main-color2 .mix-3 div {
+  width: 100%;
+  height: 3rem;
+  background-color: #006946;
+}
+article.mix-main-color2 .mix-4 {
+  margin-top: 1rem;
+}
+article.mix-main-color2 .mix-4 p {
+  margin-bottom: 0;
+}
+article.mix-main-color2 .mix-4 p:before {
+  content: "greenish with forest";
+}
+article.mix-main-color2 .mix-4 div {
+  width: 100%;
+  height: 3rem;
+  background-color: #14a508;
+}
+
+article {
+  display: inline-block;
+  width: 20%;
+  padding: 1em;
+}
+article.main-color3 .sample {
+  background-color: #0000af;
+}
+article.main-color3 .data span {
+  float: right;
+  text-align: right;
+}
+article.main-color3 .data span.name:before {
+  content: "blueish";
+}
+article.main-color3 .data span.hex:before {
+  content: "#0000af";
+}
+article.main-color3 .data span.rgb:before {
+  content: "0/0/175";
+}
+article.main-color3 .data span.hsl:before {
+  content: "240deg/100%/34%";
+}
+article.main-color3 .data label {
+  font-weight: bold;
+}
+article.variations-main-color3 h3:before {
+  content: "blueish";
+}
+article.variations-main-color3 .sample div {
+  width: 33.3333333333%;
+  height: 100%;
+  float: left;
+}
+article.variations-main-color3 .sample div.light {
+  background-color: #1616ff;
+}
+article.variations-main-color3 .sample div.normal {
+  background-color: #0000af;
+}
+article.variations-main-color3 .sample div.dark {
+  background-color: #000030;
+}
+article.mix-main-color3 h3:before {
+  content: "blueish";
+}
+article.mix-main-color3 .sample {
+  background-color: #0000af;
+}
+article.mix-main-color3 .mix-1 {
+  margin-top: 1rem;
+}
+article.mix-main-color3 .mix-1 p {
+  margin-bottom: 0;
+}
+article.mix-main-color3 .mix-1 p:before {
+  content: "blueish with redish";
+}
+article.mix-main-color3 .mix-1 div {
+  width: 100%;
+  height: 3rem;
+  background-color: #460069;
+}
+article.mix-main-color3 .mix-2 {
+  margin-top: 1rem;
+}
+article.mix-main-color3 .mix-2 p {
+  margin-bottom: 0;
+}
+article.mix-main-color3 .mix-2 p:before {
+  content: "blueish with greenish";
+}
+article.mix-main-color3 .mix-2 div {
+  width: 100%;
+  height: 3rem;
+  background-color: #004669;
+}
+article.mix-main-color3 .mix-4 {
+  margin-top: 1rem;
+}
+article.mix-main-color3 .mix-4 p {
+  margin-bottom: 0;
+}
+article.mix-main-color3 .mix-4 p:before {
+  content: "blueish with forest";
+}
+article.mix-main-color3 .mix-4 div {
+  width: 100%;
+  height: 3rem;
+  background-color: #143c71;
+}
+
+article {
+  display: inline-block;
+  width: 20%;
+  padding: 1em;
+}
+article.main-color4 .sample {
+  background-color: #329614;
+}
+article.main-color4 .data span {
+  float: right;
+  text-align: right;
+}
+article.main-color4 .data span.name:before {
+  content: "forest";
+}
+article.main-color4 .data span.hex:before {
+  content: "#329614";
+}
+article.main-color4 .data span.rgb:before {
+  content: "50/150/20";
+}
+article.main-color4 .data span.hsl:before {
+  content: "106deg/76%/33%";
+}
+article.main-color4 .data label {
+  font-weight: bold;
+}
+article.variations-main-color4 h3:before {
+  content: "forest";
+}
+article.variations-main-color4 .sample div {
+  width: 33.3333333333%;
+  height: 100%;
+  float: left;
+}
+article.variations-main-color4 .sample div.light {
+  background-color: #57e32d;
+}
+article.variations-main-color4 .sample div.normal {
+  background-color: #329614;
+}
+article.variations-main-color4 .sample div.dark {
+  background-color: #0d2605;
+}
+article.mix-main-color4 h3:before {
+  content: "forest";
+}
+article.mix-main-color4 .sample {
+  background-color: #329614;
+}
+article.mix-main-color4 .mix-1 {
+  margin-top: 1rem;
+}
+article.mix-main-color4 .mix-1 p {
+  margin-bottom: 0;
+}
+article.mix-main-color4 .mix-1 p:before {
+  content: "forest with redish";
+}
+article.mix-main-color4 .mix-1 div {
+  width: 100%;
+  height: 3rem;
+  background-color: #645a0c;
+}
+article.mix-main-color4 .mix-2 {
+  margin-top: 1rem;
+}
+article.mix-main-color4 .mix-2 p {
+  margin-bottom: 0;
+}
+article.mix-main-color4 .mix-2 p:before {
+  content: "forest with greenish";
+}
+article.mix-main-color4 .mix-2 div {
+  width: 100%;
+  height: 3rem;
+  background-color: #1ea00c;
+}
+article.mix-main-color4 .mix-3 {
+  margin-top: 1rem;
+}
+article.mix-main-color4 .mix-3 p {
+  margin-bottom: 0;
+}
+article.mix-main-color4 .mix-3 p:before {
+  content: "forest with blueish";
+}
+article.mix-main-color4 .mix-3 div {
+  width: 100%;
+  height: 3rem;
+  background-color: #1e5a52;
+}/*# sourceMappingURL=style.css.map */

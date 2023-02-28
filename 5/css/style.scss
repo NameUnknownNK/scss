@@ -1,0 +1,128 @@
+//variables
+
+$max-width: 1400px;
+
+$colors: (
+    main-color1: #af0000,
+    main-color2: #00af00,
+    main-color3: #0000af,
+    main-color4: #329614,
+);
+
+$colors-names: (
+    main-color1: "redish",
+    main-color2: "greenish",
+    main-color3: "blueish",
+    main-color4: "forest",
+);
+
+//mixins
+
+%sample{
+    width: 100%;
+    height: 6rem;
+}
+
+//functions
+
+
+
+//styles
+
+html{
+    max-width: $max-width;
+}
+
+@each $key,$value in $colors{
+    article{
+        display: inline-block;
+        width: 20%;
+        padding: 1em;
+
+        &.#{$key}{
+            .sample{
+                @extend %sample;
+                background-color: #{$value};
+            }
+
+            .data{
+                span{
+                    float:right;
+                    text-align: right;
+                    &.name:before{
+                        content: map-get($map: $colors-names, $key: $key);
+                    }
+                    &.hex:before{
+                        content: '#{$value}';
+                    }
+                    &.rgb:before{
+                        content: '#{red($value)}'+'/'+'#{green($value)}'+'/'+'#{blue($value)}';
+                    }
+                    &.hsl:before{
+                        content: '#{round(hue($value))}'+'/'+'#{round(saturation($value))}'+'/'+'#{round(lightness($value))}';
+                    }
+                }
+                label{
+                    font-weight: bold;
+                }
+            }
+        }
+
+        &.variations-#{$key}{
+            h3:before{
+                content: map-get($map: $colors-names, $key: $key);
+            }
+
+            .sample{
+                @extend %sample;
+                
+                div{
+                    width: #{calc(100%/3)};
+                    height: 100%;
+                    float: left;
+
+                    &.light{
+                        background-color: #{lighten($value,20)};
+                    }
+                    &.normal{
+                        background-color: #{$value};
+                    }
+                    &.dark{
+                        background-color: #{darken($value,25)};
+                    }
+                }
+            }
+        }
+
+        &.mix-#{$key}{
+            h3:before{
+                content: map-get($map: $colors-names, $key: $key);
+            }
+
+            .sample{
+                @extend %sample;
+                background-color: #{$value};
+            }
+
+            @for $i from 1 through 4{
+                $aux: 'main-color'+#{$i};
+                @if ($aux != $key){
+                    .mix-#{$i}{
+                        margin-top: 1rem;
+                        p{
+                            margin-bottom: 0;
+                        }
+                        p:before{
+                            content: "#{map-get($map: $colors-names, $key: $key)+' with '+map-get($colors-names, $aux)}";
+                        }
+                        div{
+                            width: 100%;
+                            height: 3rem;
+                            background-color: #{mix($value, map-get($colors, $aux), 60%)};
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

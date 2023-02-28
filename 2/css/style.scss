@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');//font-family: 'Nunito', sans-serif;
+
+$max-width: 1400px;
+$default-foreground: rgb(30,30,30);
+$default-background: #eee;
+$hover-color: red;
+
+$default-margin: 0;
+$default-padding: 0;
+
+$font-family: 'Nunito', sans-serif;
+$font-sizes : (
+    'body': 1rem,
+    'h1': 300%,
+    'h2': 200%,
+    'h3': 150%,
+    'li': 110%,
+    'p': 80%
+);
+$font-weights: (
+    'regular': 400,
+    'bold': 700,
+    'light': 300
+);
+
+html{
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+body{
+    font-family: $font-family;
+    font-size: map-get($font-sizes, 'body');
+    font-weight: map-get($map: $font-weights, $key:'body');
+}
+
+h{
+    &1{
+        font-size: map-get($map: $font-sizes, $key: quote(#{&}));
+        font-weight: map-get($map: $font-weights, $key:'bold' );
+    }
+    &2{
+        font-size: map-get($map: $font-sizes, $key: quote(#{&}));
+        font-weight: map-get($map: $font-weights, $key:'bold' );
+    }
+    &3{
+        font-size: map-get($map: $font-sizes, $key: quote(#{&}));
+        font-weight: map-get($map: $font-weights, $key:'bold' );
+    }
+}
+
+a{
+    text-decoration: none;
+    color: $default-foreground;
+}
+
+header{
+    text-align: center;
+    background-color: $default-background;
+    padding: 0.5em;
+    
+    img{
+        float: left;
+        width: 10%;
+    }
+
+    h1, h2{
+        width: 90%;
+        margin: $default-margin;
+    }
+}
+
+nav{
+    margin: 0.5em 0 0 0;
+    padding: 0.1em;
+    background-color: $default-background;
+    text-transform: uppercase;
+    text-align: center;
+
+    ul{
+        list-style-type: none;
+        margin: $default-margin;
+
+        li{
+            display: inline-block;
+            margin: $default-margin;
+            padding: 0.2em;
+            font-size: map-get($font-sizes, 'li');
+            font-weight: map-get($map: $font-weights, $key: 'regular');
+
+            &:hover{
+                font-weight: map-get($map: $font-weights, $key: 'bold');
+            }
+
+            a:hover{
+                color: $hover-color;
+            }
+        }
+    }
+}
+
+section{
+    min-height: 20em;
+}
+
+footer{
+    text-align: center;
+
+    div{
+        background-color: $default-background;
+        padding: 0.2em 0 0 0;
+        margin-bottom: 0.5em;
+
+        img{
+            width: 3em;
+        }
+    }
+
+    p{
+        background-color: $default-background;
+        font-size: map-get($map: $font-sizes, $key: 'p');
+    }
+
+}

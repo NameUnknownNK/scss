@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
+html {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 300%;
+  font-weight: 700;
+}
+h2 {
+  font-size: 200%;
+  font-weight: 700;
+}
+h3 {
+  font-size: 150%;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(30, 30, 30);
+}
+
+header {
+  text-align: center;
+  background-color: #eee;
+  padding: 0.5em;
+}
+header img {
+  float: left;
+  width: 10%;
+}
+header h1, header h2 {
+  width: 90%;
+  margin: 0;
+}
+
+nav {
+  margin: 0.5em 0 0 0;
+  padding: 0.1em;
+  background-color: #eee;
+  text-transform: uppercase;
+  text-align: center;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0.2em;
+  font-size: 110%;
+  font-weight: 400;
+}
+nav ul li:hover {
+  font-weight: 700;
+}
+nav ul li a:hover {
+  color: red;
+}
+
+section {
+  min-height: 20em;
+}
+
+footer {
+  text-align: center;
+}
+footer div {
+  background-color: #eee;
+  padding: 0.2em 0 0 0;
+  margin-bottom: 0.5em;
+}
+footer div img {
+  width: 3em;
+}
+footer p {
+  background-color: #eee;
+  font-size: 80%;
+}/*# sourceMappingURL=style.css.map */
